@@ -13,35 +13,31 @@
 
 
     <header>
-        <a href="index.html"><img src="/static/img/21077292_6406675.jpg" alt="" class="logo" /></a>
+        <a href="clima.html"><img src="/static/img/21077292_6406675.jpg" alt="" class="logo" /></a>
         <nav class="navbar">
-            <a href="#home">Clima</a>
-            <a href="#sobre">Tempo</a>
-            
+            <a href="">Clima</a>
+            <a href="">Tempo</a>
+
         </nav>
     </header>
 
     <section class="flex">
 
-
         <section class="section-pai">
-
-            
 
             <div class="section-one">
                 {% for item in previsoes %}
                 <p>{{ item }}</p>
                 {% endfor %}
             </div>
-            
 
             <div class="section-descricoes">
                 {% for item in descricoes %}
                 <p>{{ item }}</p>
                 {% endfor %}
             </div>
-             <div class="img">
-                  <img src="/static//img/variacoes-na-atmosfera.jpg" alt="">
+            <div class="img">
+                <img src="/static//img/variacoes-na-atmosfera.jpg" alt="">
             </div>
 
             <div class="section-detalhes">
@@ -51,9 +47,6 @@
                     {% endfor %}
                 </ul>
             </div>
-
-           
-          
 
         </section>
 
