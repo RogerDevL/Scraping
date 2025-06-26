@@ -1,0 +1,5 @@
+Projeto simples em web scraping
+Fiz uma coleta de dados do site Climatempo sobre o clima em São Paulo. Extraí informações como a previsão do dia, condições do céu, temperaturas mínima e máxima, chance de chuva, vento, umidade e horários do nascer e pôr do sol. Também coletei alertas de saúde, como risco de gripe e índice de raios UV, além de dados de aeroportos e cidades próximas. Organizei tudo de forma clara para facilitar a leitura.
+
+
+
