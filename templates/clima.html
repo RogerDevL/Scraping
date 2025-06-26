@@ -1,68 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Previsão do Tempo - São Paulo</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background: #f4f4f4;
-            padding: 20px;
-        }
-        .section {
-            background: #fff;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-         .section:hover{
-           background-color: rgb(215, 236, 236); 
-           font-size: 17px;
-           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        h1{
-            color: #222;
-            text-align: center;
-        }
-        ul {
-            padding-left: 20px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
+
 <body>
-    <h1>☀️ Previsão do Tempo - São Paulo</h1>
 
-    <div class="section">
-        <h2>📍 Previsão Geral</h2>
-        {% for item in previsoes %}
-            <p>{{ item }}</p>
-        {% endfor %}
-    </div>
 
-    <div class="section">
-        <h2>📌 Descrição</h2>
-        {% for item in descricoes %}
-            <p>{{ item }}</p>
-        {% endfor %}
-    </div>
+    <header>
+        <a href="index.html"><img src="/static/img/21077292_6406675.jpg" alt="" class="logo" /></a>
+        <nav class="navbar">
+            <a href="#home">Clima</a>
+            <a href="#sobre">Tempo</a>
+            
+        </nav>
+    </header>
 
-    <div class="section">
-        <h2>📊 Detalhes do Dia</h2>
-        <ul>
-            {% for item in detalhes_dia %}
+    <section class="flex">
+
+
+        <section class="section-pai">
+
+            
+
+            <div class="section-one">
+                {% for item in previsoes %}
+                <p>{{ item }}</p>
+                {% endfor %}
+            </div>
+            
+
+            <div class="section-descricoes">
+                {% for item in descricoes %}
+                <p>{{ item }}</p>
+                {% endfor %}
+            </div>
+             <div class="img">
+                  <img src="/static//img/variacoes-na-atmosfera.jpg" alt="">
+            </div>
+
+            <div class="section-detalhes">
+                <ul>
+                    {% for item in detalhes_dia %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+           
+          
+
+        </section>
+
+        <div class="section-outros">
+            <ul>
+                {% for item in detalhes_climas %}
                 <li>{{ item }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+                {% endfor %}
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>📍 Outros Detalhes (Saúde, Proximidades...)</h2>
-        <ul>
-            {% for item in detalhes_climas %}
-                <li>{{ item }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        Desenvolvido por Roger Alves Lemos • Projeto de Web Scraping com Flask
+    </footer>
+
 </body>
+
 </html>
